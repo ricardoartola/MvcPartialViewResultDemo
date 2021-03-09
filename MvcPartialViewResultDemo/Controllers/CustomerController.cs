@@ -41,14 +41,14 @@ namespace MvcPartialViewResultDemo.Controllers
                 {
                     CustmerId =  5, //Get the max+1 from customer list
                     CustomerName = collection["CustomerName"],
-                    PermanantAddress = new CustomerAddress()
+                    PermanantAddress = new CustomerAddressViewModel()
                     {
                         DoorNumber = collection["DoorNumber"].Split(',')[0],
                         City = collection["City"].Split(',')[0],
                         State = collection["State"].Split(',')[0],
                         PinNumber = collection["PinNumber"].Split(',')[0]
                     },
-                    PresentAddress = new CustomerAddress()
+                    PresentAddress = new CustomerAddressViewModel()
                     {
                         DoorNumber = collection["DoorNumber"].Split(',')[1],
                         City = collection["City"].Split(',')[1],
@@ -83,14 +83,14 @@ namespace MvcPartialViewResultDemo.Controllers
                 var customerModel = new CustomerModel
                 {
                     CustomerName = collection["CustomerName"],
-                    PermanantAddress = new CustomerAddress()
+                    PermanantAddress = new CustomerAddressViewModel()
                     {
                         DoorNumber = collection["DoorNumber"].Split(',')[0],
                         City = collection["City"].Split(',')[0],
                         State = collection["State"].Split(',')[0],
                         PinNumber = collection["PinNumber"].Split(',')[0]
                     },
-                    PresentAddress = new CustomerAddress()
+                    PresentAddress = new CustomerAddressViewModel()
                     {
                         DoorNumber = collection["DoorNumber"].Split(',')[1],
                         City = collection["City"].Split(',')[1],
@@ -148,14 +148,14 @@ namespace MvcPartialViewResultDemo.Controllers
                 {
                     CustmerId = i,
                     CustomerName = string.Concat("Customer", i),
-                    PermanantAddress = new CustomerAddress()
+                    PermanantAddress = new CustomerAddressViewModel()
                     {
                         DoorNumber = string.Concat("Permanent-D.No:4-xx-", i),
                         City = string.Concat("Permanent-City", i),
                         State = string.Concat("Permanent-State", i),
                         PinNumber = string.Concat("Permanent-Pin", i)
                     },
-                    PresentAddress = new CustomerAddress()
+                    PresentAddress = new CustomerAddressViewModel()
                     {
                         DoorNumber = string.Concat("Present-D.No:4-xx-", i),
                         City = string.Concat("Present-City", i),

@@ -5,17 +5,9 @@ using System.Web;
 
 namespace MvcPartialViewResultDemo.Models
 {
-    public class CustomerModel
+    public class Address
     {
-        public int CustmerId { get; set; }
-        public string CustomerName { get; set; }
-        public CustomerAddressViewModel PermanantAddress { get; set; }
-        public CustomerAddressViewModel PresentAddress { get; set; }
-
-    }
-
-    public class CustomerAddressViewModel
-    {
+        public int Id { get; set; }
         public string DoorNumber { get; set; }
         public string City { get; set; }
         public string State { get; set; }
